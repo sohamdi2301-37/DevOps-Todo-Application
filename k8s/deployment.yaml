@@ -19,3 +19,5 @@ spec:
         - name: devops-todo-capstone
           image: 782208973324.dkr.ecr.ap-south-1.amazonaws.com/devops-todo-capstone:v2
           imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 80
