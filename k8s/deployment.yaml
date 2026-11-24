@@ -3,6 +3,8 @@ kind: Deployment
 metadata:
   name: todo-app
   namespace: default
+  labels:
+    app: todo-app
 spec:
   replicas: 2
   selector:
@@ -14,7 +16,6 @@ spec:
         app: todo-app
     spec:
       containers:
-        - name: todo-app
+        - name: devops-todo-capstone
           image: 782208973324.dkr.ecr.ap-south-1.amazonaws.com/devops-todo-capstone:v2
-          ports:
-            - containerPort: 80
+          imagePullPolicy: IfNotPresent
